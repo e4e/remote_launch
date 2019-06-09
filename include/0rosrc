@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# @neobotix
+source /opt/ros/kinetic/setup.bash
+# Neobotix Package
+source $HOME/ros_workspace/devel/setup.bash
+
+# sets the correct export ROS_MASTER_URI and ROS_IP
+source $HOME/rosenv/rosenv.sh
+# https://github.com/LJMP/rosenv
+
+# the bot
+export ROBOT=mpo_700
+# the map
+export MAP_NAME=2019-01-31
+
+ROS_PACKAGE_PATH=/home/neobotix/ros_workspace:/opt/ros/kinetic/share:/opt/ros/kinetic/stacks
+
+echo "0rosrc okii :3"

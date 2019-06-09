@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- @remote do this launch -->
+<launch>
+  <group>
+    <machine name="neo" address="neobotix.local" env-loader="/home/neobotix/remote_launch.sh" user="neobotix" password="<<<" timeout="15" default="true"/>
+    <node machine="neo" pkg="remote_launch" type="bringup" name="$(anon ship)"/>
+    <node machine="neo" pkg="rosservice" type="rosservice" name="$(anon yarr)" args="call --wait /relayboard_v2/set_LCD_msg 'NeoMaster=remote/$(optenv USER captain?)'"/>
+  </group>
+</launch>

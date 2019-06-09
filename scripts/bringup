@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# @neobotix
+
+# remote roslaunch searching local PC for launch file
+# http://answers.ros.org/question/250591/remote-roslaunch-searching-local-pc-for-launch-file/?answer=251519#post-id-251519
+# The workaround I did finally was to run the launch file from a shell script in the embedded platform. I wrote the roslaunch command on a shell script and placed it in the package folder. Then called the shell script like a node from the remote PC launch file.
+# <node machine="tegra" type=run_launch.sh pkg=ros_package_name name=run_launch output="screen"/>
+
+roslaunch neo_mpo_700 bringup.launch
